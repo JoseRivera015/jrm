@@ -1,0 +1,38 @@
+#sliderContainer{
+    width: 100%;
+    max-width: 1000px;
+    max-height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+#frame{
+    width: 100%;
+}
+#frameLink{
+    transition: .5s;
+}
+.sliderBtn{
+    position: absolute;
+    top: calc(50% - 25px);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 5px;
+}
+.sliderBtn img{
+    filter: invert(100%);
+}
+.sliderBtn:hover{
+    background: black;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+#btnPrev{
+    left: 0;
+}
+#btnPrev img{
+    transform: rotateY(180deg);
+}
+#btnNext{
+    right: 0;
+}

@@ -1,0 +1,22 @@
+#mainVideo{
+	width: 100vw;
+	margin: -1rem -1rem 0;
+	position: sticky;
+	top: 50px;
+}
+.aLaLista {
+	display: block;
+	margin: auto;
+}
+@media only screen and (min-width: 720px) {
+	#mainVideo{
+		width: 100%;
+		margin: auto;
+		position: initial;
+	}
+}
+@media only screen and (orientation: landscape) {
+	#mainVideo{
+		position: initial;
+	}
+}

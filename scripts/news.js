@@ -1,7 +1,7 @@
 import {cardGrid} from './cardGrid.js'
-let cards = [{title: 'Annie',
-    picture: './images/gallery/annie.jpg',
-    href: 'https://www.google.com'
+let cards = [{title: 'His Dark materials',
+    picture: './hisDarkMaterials/images/cap11.jpg',
+    href: './hisDarkMaterials/chapters.html'
   },
   {
     title: 'Jose',

@@ -4,6 +4,7 @@
     max-height: 300px;
     position: relative;
     overflow: hidden;
+    margin: auto;
 }
 #frame{
     width: 100%;

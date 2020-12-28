@@ -31,7 +31,9 @@
 
 	--darkBgColor: black;
 	--darkTextColor: white;
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  
+  --siteMaxWidth: 100%;
 }
 h1,h2,h3,h4,h5,h6{
   color: var(--mainColor);
@@ -65,7 +67,7 @@ blockquote{
 }
 button{
 	background: var(--mainColor);
-	color: var(--subTextColor);
+	color: var(--headFooTextColor);
 	margin: 10px;
 	padding: 10px;
 	border: none;
@@ -77,7 +79,9 @@ button{
 }
 body{
 	font-family: 'equity', serif;
-	background: var(--bgColor);
+  background: var(--bgColor);
+  /* max-width: 1200px; */
+  margin: auto;
 }
 header{
   background: var(--mainColor);
@@ -86,6 +90,8 @@ header{
   position: sticky;
   top: 0;
   z-index: 30;
+  max-width: var(--siteMaxWidth);
+  margin: auto;
 }
 header .logo{
   max-height: 50px;
@@ -144,13 +150,16 @@ nav ul {
 main{
   padding: 1rem;
   margin: auto;
-  max-width: 1000px;
+  max-width: var(--siteMaxWidth);
 }
 footer{
   background: var(--mainColor);
   display: flex;
   justify-content: space-between;
+  max-width: var(--siteMaxWidth);
   align-items: center;
+
+  margin: auto;
 }
 .fText{
   color: var(--headFooTextColor);

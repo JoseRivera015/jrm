@@ -18,5 +18,10 @@ let cards = [{
     title: 'Theft',
     picture: 'images/cap11.jpg',
     href: 'cap11.html'
+  },
+  {
+    title: 'Tower of the Angels',
+    picture: 'images/cap12.jpg',
+    href: 'cap12.html'
 }]
 cardGrid(cards)

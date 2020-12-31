@@ -1,6 +1,6 @@
 import {cardGrid} from './cardGrid.js'
 let cards = [{title: 'His Dark Materials',
-    picture: './hisDarkMaterials/images/cap11.jpg',
+    picture: './hisDarkMaterials/images/posterCap12.jpg',
     href: './hisDarkMaterials/chapters.html'
   },
   {

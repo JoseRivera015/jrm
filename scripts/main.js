@@ -39,7 +39,7 @@ let menu = () => {
     let nav = document.querySelector('nav').classList
     let hide = classX => nav.remove(classX)
     let toggle = classX => !nav.contains(classX)? nav.add(classX): hide(classX)
-    document.querySelector('#menuBtn').addEventListener('click', () => toggle('show'))
+    document.querySelector('#menuBtn').addEventListener('mousedown', () => toggle('show'))
     document.querySelector('main').addEventListener('click', () => hide('show'))
 }
 

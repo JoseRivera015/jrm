@@ -3,6 +3,7 @@ export let slider = (images) => {
     let setImage = counter => {
         document.querySelector('#frame').setAttribute('src', images[counter].sliderSrc)
         document.querySelector('#frameLink').setAttribute('href', images[counter].sliderHref)
+        document.querySelector('#frameText').textContent = images[counter].sliderText
     }
     setImage(0)
     let PrevSlide = () => {

@@ -23,11 +23,6 @@ let images = [
         sliderSrc: 'images/mainSlider/5.jpg',
         sliderHref: 'https://joserivera015.github.io/my-first-rep/',
         sliderText: 'Texto aqui 5'
-    },
-    {
-        sliderSrc: 'https://picsum.photos/600',
-        sliderHref: 'https://joserivera015.github.io/my-first-rep/',
-        sliderText: 'Texto aqui 6'
     }
 ]
 

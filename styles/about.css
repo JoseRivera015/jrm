@@ -4,7 +4,7 @@
   margin: 70px auto auto auto;
 }
 
-.personCard h1 {
+.cardTitle {
   color: var(--headFooTextColor);
 }
 

@@ -1,27 +1,62 @@
 let staff = [{title: 'Jose Rivera',
     picture: './images/gallery/yo.jpg',
-    features: ['Estudiante en diseño web', 'Estudiante en diseño grafico'],
+    features: ['Estudiante en diseño web', 'Estudiante en diseño grafico', 'Amigo de Annie'],
     about: 'Me considero una persona responsable, optimista, creativa impulsador de metas y desafios prsonales, capaz de vencer los miedos para generar cambios, con capacidad para el trabajo en equipo.',
-    social: ['Facebook','https://www.facebook.com/']
+    social: [
+      {icon: 'facebook',
+      link: 'https://www.facebook.com/'},
+      {icon: 'twitter',
+      link: 'https://www.twitter.com/'},
+  ]
   },
   {title: 'Annie Palacin',
     picture: './images/gallery/annie.jpg',
-    features: ['Estudiante en diseño web', 'Estudiante en diseño grafico'],
+    features: ['Estudiante en diseño web', 'Estudiante en diseño grafico', 'Amiga de Jose'],
     about: 'Me considero una persona responsable, optimista, creativa impulsador de metas y desafios prsonales, capaz de vencer los miedos para generar cambios, con capacidad para el trabajo en equipo.',
-    social: ['Facebook','https://www.facebook.com/']
+    social: []
   }]
   
+  let iconSelector = icon => {
+    if (icon === 'facebook') {
+      return './images/icons/facebook.svg'
+    } else if (icon === 'twitter') {
+      return './images/icons/twitter.svg'
+    }
+      
+  }
+
+  let socialListFiller = (container, icon, link) => {
+    anchor = document.createElement('a')
+    anchor.setAttribute('href', link)
+    imgTag = document.createElement('img')
+    imgTag.setAttribute('src', iconSelector(icon))
+    imgTag.classList.add('tinyIcon')
+    anchor.appendChild(imgTag)
+    container.appendChild(anchor)
+  }
+  let listFiller = (container, text, itemTag) => {
+    element = document.createElement(itemTag)
+    element.textContent = text
+    container.appendChild(element)
+  }
+
   let cardContainer = document.createElement('div')
-  staff.forEach(elem => {
+  cardContainer.classList.add('cardContainer')
+  staff.forEach(card => {
     let df = document.querySelector('template').cloneNode(/*deep*/true).content
     let cardTitle = df.querySelector('.cardTitle')
     let profilePic = df.querySelector('.profilePic')
     let cardFeatures = df.querySelector('.cardFeatures')
+    card.features.forEach(elem => listFiller(cardFeatures, elem, 'li'))
     let cardAbout = df.querySelector('.cardAbout')
-    cardTitle.textContent = elem.title
-    profilePic.setAttribute('src', elem.picture)
+    let socialContainer = df.querySelector('.socialContainer')
+    card.social.forEach(elem => socialListFiller(socialContainer, elem.icon, elem.link))
+    cardTitle.textContent = card.title
+    profilePic.setAttribute('src', card.picture)
     cardContainer.appendChild(df)
-    cardAbout.textContent = elem.about
+    cardAbout.textContent = card.about
   })
   
+  
+
   document.querySelector('main').insertAdjacentElement('beforeend', cardContainer)

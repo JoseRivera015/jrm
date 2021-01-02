@@ -2,6 +2,7 @@
   width: 90%;
   max-width: 400px;
   margin: 70px auto auto auto;
+  padding: 20px;
 }
 
 .cardTitle {
@@ -48,4 +49,10 @@ main .socialContainer {
 
 main.modoOscuro img {
   filter: none;
+}
+@media (min-width: 720px) {
+  .cardContainer{
+      display: flex;
+      flex-direction: row;
+  }
 }

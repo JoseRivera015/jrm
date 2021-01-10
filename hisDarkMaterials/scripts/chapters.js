@@ -60,12 +60,12 @@ let cards = [{
     href: 'cap12.html'
   },
   {
-    title: '13. Malice',
+    title: '13. The Scholar',
     picture: 'images/posterCap13.jpg',
     href: 'cap13.html'
   },
   {
-    title: '14. Æsahættr',
+    title: '14. Malice',
     picture: 'images/posterCap14.jpg',
     href: 'cap14.html'
 }]

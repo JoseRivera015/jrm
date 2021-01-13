@@ -68,10 +68,10 @@ let cards = [{
     title: '14. Malice',
     picture: 'images/posterCap14.jpg',
     href: 'cap14.html'
-  }/*,
+  },
   {
     title: '15. Æsahættr',
     picture: 'images/posterCap15.jpg',
     href: 'cap15.html'
-  }*/]
+  }]
 cardGrid(cards)

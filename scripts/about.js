@@ -24,7 +24,6 @@ let staff = [{title: 'Jose Rivera',
     }
       
   }
-
   let socialListFiller = (container, icon, link) => {
     anchor = document.createElement('a')
     anchor.setAttribute('href', link)
@@ -34,27 +33,30 @@ let staff = [{title: 'Jose Rivera',
     anchor.appendChild(imgTag)
     container.appendChild(anchor)
   }
-  let listFiller = (container, text, itemTag) => {
+  let listFiller = (container, itemTag, text) => {
     element = document.createElement(itemTag)
     element.textContent = text
     container.appendChild(element)
   }
+  let changeText = (container, selector, text) => container.querySelector(selector).textContent = text
 
   let cardContainer = document.createElement('div')
   cardContainer.classList.add('cardContainer')
   staff.forEach(card => {
     let df = document.querySelector('template').cloneNode(/*deep*/true).content
-    let cardTitle = df.querySelector('.cardTitle')
+    changeText(df, '.cardTitle', card.title)
+    changeText(df, '.cardAbout', card.about)
+    //let cardTitle = df.querySelector('.cardTitle')
     let profilePic = df.querySelector('.profilePic')
     let cardFeatures = df.querySelector('.cardFeatures')
-    card.features.forEach(elem => listFiller(cardFeatures, elem, 'li'))
-    let cardAbout = df.querySelector('.cardAbout')
+    card.features.forEach(elem => listFiller(cardFeatures, 'li', elem))
+    //let cardAbout = df.querySelector('.cardAbout')
     let socialContainer = df.querySelector('.socialContainer')
     card.social.forEach(elem => socialListFiller(socialContainer, elem.icon, elem.link))
-    cardTitle.textContent = card.title
+    //cardTitle.textContent = card.title
     profilePic.setAttribute('src', card.picture)
     cardContainer.appendChild(df)
-    cardAbout.textContent = card.about
+    //cardAbout.textContent = card.about
   })
   
   

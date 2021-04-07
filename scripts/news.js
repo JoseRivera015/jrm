@@ -8,15 +8,15 @@ let cards = [{title: 'His Dark Materials',
     picture: './images/gallery/yo.jpg',
     href: 'https://bing.com'
   },{
-    title: 'Annie y Jose',
+    title: 'Jose',
     picture: './images/gallery/yo.jpg',
     href: 'https://bing.com'
   },{
-    title: 'Annie y Jose',
+    title: 'Jose',
     picture: './images/gallery/yo.jpg',
     href: 'https://bing.com'
   },{
-    title: 'Annie y Jose',
+    title: 'Jose',
     picture: './images/gallery/yo.jpg',
     href: 'https://bing.com'
   }]

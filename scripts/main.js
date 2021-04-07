@@ -1,8 +1,27 @@
-let scriptSrc = document.currentScript.getAttribute('src')
-let actualLevel = scriptSrc.substring(0, scriptSrc.lastIndexOf("scripts"))
+let elevateSources = (element, level) => {
+    let images = document.querySelectorAll(element + ' img')
+    images.forEach(image => {
+    let imageSource = image.getAttribute('src')
+    image.setAttribute('src', level + imageSource)
+    })
+}
+let elevateReferences = (element, level) => {
+    let anchors = document.querySelectorAll(element + ' a')
+    anchors.forEach(anchor => {
+    let anchorReference = anchor.getAttribute('href')
+    anchor.setAttribute('href', level + anchorReference)
+    })
+}
+let toTop = () => {
+    document.querySelector('#toTop').setAttribute('href', '#')
+}
+
+let currentScriptSrc = document.currentScript.getAttribute('src')
+let actualLevel = currentScriptSrc.substring(0, currentScriptSrc.lastIndexOf("scripts"))
 
 let body = document.querySelector('body')
 let main = document.querySelector('main')
+//cambiar esto por async/await:
 fetch(actualLevel + 'templates/header.html')
 .then(response => response.text())
 .then(data => {
@@ -47,6 +66,7 @@ document.documentElement.lang = 'es'
 
 let charset = document.createElement('meta')
 charset.setAttribute('charset', 'UTF-8')
+document.head.appendChild(charset)
 
 let favicon = document.createElement('link')
 favicon.setAttribute('rel', 'shortcut icon')
@@ -64,21 +84,5 @@ viewport.setAttribute('name', 'viewport')
 viewport.setAttribute('content', 'width=device-width')
 document.head.appendChild(viewport)
 
-let elevateSources = (element, level) => {
-    let images = document.querySelectorAll(element + ' img')
-    images.forEach(image => {
-    let imageSource = image.getAttribute('src')
-    image.setAttribute('src', level + imageSource)
-    })
-}
-let elevateReferences = (element, level) => {
-    let anchors = document.querySelectorAll(element + ' a')
-    anchors.forEach(anchor => {
-    let anchorReference = anchor.getAttribute('href')
-    anchor.setAttribute('href', level + anchorReference)
-    })
-}
 
-let toTop = () => {
-    document.querySelector('#toTop').setAttribute('href', '#')
-}
+

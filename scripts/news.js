@@ -4,9 +4,9 @@ let cards = [{title: 'His Dark Materials',
     href: './hisDarkMaterials/chapters.html'
   },
   {
-    title: 'Jose',
+    title: 'Bootstrap',
     picture: './images/gallery/yo.jpg',
-    href: 'https://bing.com'
+    href: 'bootstrap/index.html'
   },{
     title: 'Jose',
     picture: './images/gallery/yo.jpg',
